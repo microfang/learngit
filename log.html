@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    log = function() {
+        console.log.apply(console,arguments);
+    }
+    var ensure = function(condition,message) {
+        if(!condition) {
+            console.log(message);
+        }
+    }
+    function sum (array) {
+        var s=0;
+        for (var i = 0; i < array.length; i++) {
+            s += array[i]
+        }
+        return s;
+    }
+    // var array = [1,2,3,4,5];
+    //写测试
+    var testSum = function() {
+        var number = [1,2,3,4];
+        var value = 10;
+        ensure(value == sum(number),'sum错误');
+    }
+    testSum();
+</script>
